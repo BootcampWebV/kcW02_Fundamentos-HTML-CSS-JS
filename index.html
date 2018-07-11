@@ -14,8 +14,146 @@
 <body>
 
 </body>
-<nav></nav>
-<header></header>
-<section></section>
+
+<header id="home">
+    <h1>Nauel Gamero - Desarrollador Web</h1>
+    <p></p>
+</header>
+
+<nav>
+    <span>NauelG</span>
+    <ul>
+        <li>
+            <a href="#about">Sobre Mi</a>
+        </li>
+        <li>
+            <a href="#skills">Habilidades</a>
+        </li>
+        <li>
+            <a href="#career">Experiencia</a>
+        </li>
+        <li>
+            <a href="#contact">Contacto</a>
+        </li>
+    </ul>
+</nav>
+
+<section id="about">
+    <h2>Sobre Mi</h2>
+    <p>
+        Curioso y apasionado. La pasión es el ingrediente necesario para progresar continuamente y la curiosidad nos hace descubrir nuevos caminos para hacerlo.
+    </p>
+    <p>
+        Tras un tiempo dedicado a la gestión en retail/hostelería y muy ligado al ámbito empresariao, la curiosidad me ha hecho formarme en aquello que me apasiona, el código, la informática y, en general, todo aquello que entienda de 0s y 1s.
+    </p>
+    <p>
+        Amante del deporte, la montaña, la família y motero adicto declarado.
+    </p>
+    <img src="./img/profileImg.jpg" alt="Foto de Perfil de Nauel Gamero">
+    <div class="infoWrapper">
+        <ul>
+            <li>Girona, España</li>
+            <li>690043082</li>
+            <li>Julio 1991</li>
+            <li>g.nauel@gmail.com</li>
+        </ul>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Formación y Habilidades</h2>
+    <div class="skillsWrapper">
+        <ul>
+            <li>HTML / CSS
+                <div class="progress prg1"></div>
+            </li>
+            <li>Javascript
+                <div class="progress prg2"></div>
+            </li>
+            <li>Node.JS
+                <div class="progress prg3"></div>
+            </li>
+            <li>Angular
+                <div class="progress prg4"></div>
+            </li>
+            <li>SEO
+                <div class="progress prg5"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="academyWrapper">
+        <ul>
+            <li>2018 - Web Startup Engineering Bootcamp - KeepCoding</li>
+            <li>2017 - Curso de Angular Avanzado (MEAN) - Fernando Herrera</li>
+            <li>2017 - Curso de Principios de Angular - Fernando Herrera</li>
+            <li>2017 - Curso de Fundamentos de Python - Hector Costa</li>
+            <li>2017 - Curso de Fundamentos de HTML, CSS y JS - Javier Vilena</li>
+        </ul>
+    </div>
+</section>
+
+<section id="career">
+    <h2>Experiéncia</h2>
+    <p>
+        <h3>09/2014 - Actualidad: PdePA Coffee Bakery, Lloret de Mar (Girona)</h3>
+        Creación y consolidación de la marca PdePA Coffee Bakery y de su modelo de negocio desde sus inicios hasta la consolidación del quinto local propio, trabajando diversas áreas de la empresa dependiendo de su ciclo de vidatales como compras, producción,
+        producto, expansión, IT y dirección.<br/>Actualmente la empresa se encuentra en fase de expansión y me encargo de desarrollar el área de franquicia como Director de Expansión planificando y llevando a cabo todas las fases que componen
+        la apertura de una nueva unidad franquiciada.
+    </p>
+    <p>
+        <h3>11/2013 - 09/2014: DTSgrup, Vidreres (Girona)</h3>
+        Gestión administrativa en empresa de construcción desarrollando tareas de conciliación bancaria, facturación, presupuestos, gestión de clientes, control de cobros y pagos, trabajos de dibujo vectorial, etc.
+    </p>
+</section>
+
+<section id="contact">
+    <h2>¿Hablamos?</h2>
+    <form action="" id="contactForm">
+        <div class="formGroup">
+            <label for="iName">Nombre</label>
+            <input type="text" id="iName" name="iName">
+        </div>
+        <div class="formGroup">
+            <label for="iMail">Correo</label>
+            <input type="email" name="iMail" id="iMail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+        </div>
+        <div class="formGroup">
+            <label for="iKnown">¿Cómo me has conocido?</label>
+            <select name="iKnown" id="iKnown">
+                <option value="lkdn">LinkedIn</option>
+                <option value="ijobs">Infojobs</option>
+                <option value="gith">GitHub</option>
+                <option value="other">Otros</option>
+            </select>
+        </div>
+        <div class="formGroup dNone">
+            <label for="otherKnow">¿Cómo?</label>
+            <input type="text" id="otherKnow" name="otherKnow">
+        </div>
+        <div class="formGroup">
+            <label for="iTel">Teléfono</label>
+            <input type="tel" name="iTel" id="iTel" pattern="[0-9]{9}">
+        </div>
+        <div class="formGroup">
+            <label for="iComent">Cuéntame algo</label>
+            <textarea name="iComent" id="iComent" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit" class="button" id="send">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <nav>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/nauelg" target="_blank" title="linkedIn">LinkedIn</a></li>
+            <li>
+                <a href="https://twitter.com/GNauel" target="_blank" title="Twitter">Twitter</a>
+            </li>
+            <li>
+                <a href="https://github.com/NauelG/" target="_blank" title="GitHub">GitHub</a>
+            </li>
+        </ul>
+    </nav>
+</footer>
 
 </html>
