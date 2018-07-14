@@ -375,6 +375,9 @@
                 display: inline-block;
                 margin: 0.5rem 1rem;
             }
+            nav#mainNav a.active {
+                border-bottom: 2px solid var(--secondary-color);
+            }
             nav#mainNav i {
                 display: none;
             }
