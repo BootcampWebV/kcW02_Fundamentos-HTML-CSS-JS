@@ -10,3 +10,5 @@ El CSS se diseña con una filosofía mobile first, de una manera totalmente resp
 
 Se diseña de manera que las clases sean reutilizables y accediendo a los elementos grácias a la cascada de CSS usando como selector las própias etiquetas HTML siempre que se pueda.
 
+Todo el crecimiento del diseño se hace jugando con las `template-columns` de CSS grid.
+
