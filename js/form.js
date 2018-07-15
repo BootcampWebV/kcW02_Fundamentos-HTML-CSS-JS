@@ -74,8 +74,8 @@ export class Form {
         console.log(count);
         this.oMessage.setCustomValidity('');
         console.log(count.length)
-        if (count.length < 150) {
-            this.oMessage.setCustomValidity('El mensaje debe contener al menos 150 palabras.')
+        if (count.length > 150) {
+            this.oMessage.setCustomValidity('El mensaje puede contener un máximo 150 palabras.')
         }
     }
 
