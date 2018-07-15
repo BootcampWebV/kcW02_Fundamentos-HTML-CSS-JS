@@ -126,11 +126,11 @@
     <form action="" id="contactForm">
         <div class="formGroup">
             <label for="iName">Nombre</label>
-            <input class="formControl" type="text" id="iName" name="iName">
+            <input class="formControl" type="text" id="iName" name="iName" required>
         </div>
         <div class="formGroup">
             <label for="iMail">Correo</label>
-            <input class="formControl" type="email" name="iMail" id="iMail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            <input class="formControl" type="email" name="iMail" id="iMail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
         </div>
         <div class="formGroup">
             <label for="iKnown">¿Cómo me has conocido?</label>
@@ -141,13 +141,13 @@
                 <option value="other">Otros</option>
             </select>
         </div>
-        <div class="formGroup dNone">
+        <div id="groupOtherKnow" class="formGroup dNone">
             <label for="otherKnow">¿Cómo?</label>
             <input class="formControl" type="text" id="otherKnow" name="otherKnow">
         </div>
         <div class="formGroup">
             <label for="iTel">Teléfono</label>
-            <input class="formControl" type="tel" name="iTel" id="iTel" pattern="[0-9]{9}">
+            <input class="formControl" type="tel" name="iTel" id="iTel" pattern="[0-9]{9}" required>
         </div>
         <div class="formGroup">
             <label for="iComent">Cuéntame algo</label>

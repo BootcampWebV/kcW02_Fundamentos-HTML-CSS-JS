@@ -24,10 +24,22 @@ export class Form {
         }
 
         this.oKnow.addEventListener('change', this.selectKnow.bind(this))
-        console.log(this.oName.checkValidity())
+
+
+        this.oName.addEventListener('input', this.validityName.bind(this))
+
+        this.oMail.addEventListener('input', this.validityMail.bind(this))
+
+        this.oTel.addEventListener('input', this.validityTel.bind(this))
+
+        this.oMessage.addEventListener('input', this.validityMessage.bind(this))
+
+        this.oForm.addEventListener('submit', this.saveData.bind(this))
     }
-    hola() {
-        console.log('hola')
+
+
+    hola(event) {
+        console.log(event)
     }
 
     selectKnow(event) {
@@ -35,5 +47,53 @@ export class Form {
         if (event.target.value == 'other') {
             this.groupOtherKnow.classList.remove('dNone')
         }
+    }
+
+    validityName() {
+        if (!this.oName.checkValidity()) {
+            this.oName.setCustomValidity('Es necesario introducir el nombre.')
+        }
+    }
+
+    validityMail() {
+        this.oMail.setCustomValidity('')
+        if (!this.oMail.checkValidity()) {
+            this.oMail.setCustomValidity('La dirección de correo introducida no es válida.')
+        }
+    }
+
+    validityTel() {
+        this.oTel.setCustomValidity('')
+        if (!this.oTel.checkValidity()) {
+            this.oTel.setCustomValidity('El teléfono introducido no es correcto.')
+        }
+    }
+
+    validityMessage(event) {
+        let count = event.target.value.split(' ');
+        console.log(count);
+        this.oMessage.setCustomValidity('');
+        console.log(count.length)
+        if (count.length < 150) {
+            this.oMessage.setCustomValidity('El mensaje debe contener al menos 150 palabras.')
+        }
+    }
+
+    saveData(event) {
+        event.preventDefault()
+
+        this.data = {
+            name: this.oName.value,
+            email: this.oMail.value,
+            phone: this.oTel.value,
+            know: this.oKnow.value,
+            message: this.oMessage.value
+        }
+
+        if (this.oKnow.value == 'other') {
+            this.data.know = this.oOtherKnow.value
+        }
+
+        console.table(this.data)
     }
 }
