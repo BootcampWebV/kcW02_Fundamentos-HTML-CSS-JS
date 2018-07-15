@@ -344,6 +344,7 @@
             background-color: var(--primary_color);
             opacity: 0.7;
             border-radius: 0.5rem;
+            cursor: pointer
         }
         /* Media Queries RWD */
         

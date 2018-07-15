@@ -8,6 +8,8 @@ export class Menu {
         this.aSections = document.querySelectorAll('section')
         this.oOffsets = []
 
+        this.oToTop = document.querySelector('#toTop')
+
         this.aMenu.forEach(
             (item) => {
                 item.addEventListener('click', this.activarItem.bind(this))
@@ -18,6 +20,8 @@ export class Menu {
                 element.addEventListener('click', this.navigate.bind(this))
             }
         )
+
+        this.oToTop.addEventListener('click', this.toTop)
 
         window.addEventListener('scroll', this.changeMenu.bind(this))
 
@@ -48,6 +52,12 @@ export class Menu {
         this.showMenu();
     }
 
+    toTop() {
+        document.querySelector('#home').scrollIntoView({
+            behavior: 'smooth'
+        })
+    }
+
     activarItem(element) {
         this.aMenu.forEach(
             (element) => {
@@ -58,6 +68,9 @@ export class Menu {
 
     changeMenu() {
         let pageOffset = window.pageYOffset
+
+        this.showToTop(pageOffset)
+
         let menuItem = 0
         if (pageOffset < this.oOffsets['#about']) {
             menuItem = undefined;
@@ -77,6 +90,14 @@ export class Menu {
 
         if (menuItem >= 0) {
             this.aMenu[menuItem].classList.add('active')
+        }
+    }
+
+    showToTop(offset) {
+        if (offset > 250 && this.oToTop.classList.contains('dNone')) {
+            this.oToTop.classList.toggle('dNone')
+        } else if (offset < 250 && !this.oToTop.classList.contains('dNone')) {
+            this.oToTop.classList.toggle('dNone')
         }
     }
 
