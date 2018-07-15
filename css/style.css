@@ -397,6 +397,10 @@ i#toTop {
         top: 0;
         left: 0;
     }
+    nav#mainNav ul.onTop {
+        /* background: transparent; */
+        opacity: 0;
+    }
     nav#mainNav ul li {
         display: inline-block;
         margin: 0.5rem 1rem;

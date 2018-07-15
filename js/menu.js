@@ -96,8 +96,10 @@ export class Menu {
     showToTop(offset) {
         if (offset > 250 && this.oToTop.classList.contains('dNone')) {
             this.oToTop.classList.toggle('dNone')
+            this.mainMenu.firstElementChild.classList.toggle('onTop')
         } else if (offset < 250 && !this.oToTop.classList.contains('dNone')) {
             this.oToTop.classList.toggle('dNone')
+            this.mainMenu.firstElementChild.classList.toggle('onTop')
         }
     }
 
