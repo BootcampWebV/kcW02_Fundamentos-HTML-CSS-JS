@@ -75,7 +75,9 @@ export class Menu {
             (element) => element.classList.remove('active')
         )
 
-        this.aMenu[menuItem].classList.add('active')
+        if (menuItem >= 0) {
+            this.aMenu[menuItem].classList.add('active')
+        }
     }
 
     prepararNavegacion() {
@@ -84,7 +86,6 @@ export class Menu {
                 let cumulative = this.cumulativeOffset(element);
                 this.oOffsets['#' + element.id] = cumulative;
             })
-        console.table(this.oOffsets)
     }
 
     cumulativeOffset(element) {
